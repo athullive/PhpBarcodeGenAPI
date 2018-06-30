@@ -32,21 +32,21 @@ class URI_test extends CI_TestCase {
 
 	public function test_fetch_uri_string()
 	{
-		define('SELF', 'index.php');
+		define('SELF', 'Index.php');
 
 		// uri_protocol: AUTO
 		$this->uri->config->set_item('uri_protocol', 'AUTO');
 
 		// Test a variety of request uris
 		$requests = array(
-			'/index.php/controller/method' => 'controller/method',
-			'/index.php?/controller/method' => 'controller/method',
-			'/index.php?/controller/method/?var=foo' => 'controller/method'
+			'/Index.php/controller/method' => 'controller/method',
+			'/Index.php?/controller/method' => 'controller/method',
+			'/Index.php?/controller/method/?var=foo' => 'controller/method'
 		);
 
 		foreach ($requests as $request => $expected)
 		{
-			$_SERVER['SCRIPT_NAME'] = '/index.php';
+			$_SERVER['SCRIPT_NAME'] = '/Index.php';
 			$_SERVER['REQUEST_URI'] = $request;
 
 			$this->uri->_fetch_uri_string();
@@ -54,8 +54,8 @@ class URI_test extends CI_TestCase {
 		}
 
 		// Test a subfolder
-		$_SERVER['SCRIPT_NAME'] = '/subfolder/index.php';
-		$_SERVER['REQUEST_URI'] = '/subfolder/index.php/controller/method';
+		$_SERVER['SCRIPT_NAME'] = '/subfolder/Index.php';
+		$_SERVER['REQUEST_URI'] = '/subfolder/Index.php/controller/method';
 
 		$this->uri->_fetch_uri_string();
 		$this->assertEquals('controller/method', $this->uri->uri_string);

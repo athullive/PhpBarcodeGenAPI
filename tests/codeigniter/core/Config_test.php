@@ -8,7 +8,7 @@ class Config_test extends CI_TestCase {
 
 		// set predictable config values
 		$this->cfg = array(
-			'index_page'		=> 'index.php',
+			'index_page'		=> 'Index.php',
 			'base_url'		=> 'http://example.com/',
 			'subclass_prefix'	=> 'MY_'
 		);

@@ -59,7 +59,7 @@ class String_helper_test extends CI_TestCase {
 		$strs = array(
 			'http://codeigniter.com'		=> 'http://codeigniter.com',
 			'//var/www/html/example.com/'	=> '/var/www/html/example.com/',
-			'/var/www/html//index.php'		=> '/var/www/html/index.php'
+			'/var/www/html//Index.php'		=> '/var/www/html/Index.php'
 		);
 
 		foreach ($strs as $str => $expect)
