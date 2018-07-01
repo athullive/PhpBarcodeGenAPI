@@ -116,7 +116,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		</div>
 
 		<p class="footer">
-            <span class="copyright">© 2018 Vanishree CA, ALL RIGHTS RESERVED</span>
+            <span class="copyright">© 2018 Vanishree CA, SOME RIGHTS RESERVED</span>
             <span class="appInfo">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'testing') ?  'phpBarcodeGenAPI Version <strong> 1.0 </strong>' : '' ?> </span>
         </p>
 	</div>

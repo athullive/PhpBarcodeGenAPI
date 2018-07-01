@@ -53,6 +53,14 @@ $route['default_controller'] = 'Home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-//$route['Api/(:any)'] = 'Api/index';
+$route['api/1d'] = 'api/oneD';
 $route['api/2d'] = 'api/twoD';
-$route['api/3d'] = 'Api/threeD';
+$route['api/1d/(:any)'] = 'api/oneD/$1';
+$route['api/2d/(:any)'] = 'api/twoD/$1';
+$route['api/1d/(:any)/(:any)'] = 'api/oneD/$1/$2';
+$route['api/2d/(:any)/(:any)'] = 'api/twoD/$1/$2';
+$route['api/1d/(:any)/(:any)/(:any)'] = 'api/oneD/$1/$2/$3';
+$route['api/2d/(:any)/(:any)/(:any)'] = 'api/twoD/$1/$2/$2';
+
+$route['api/(:any)'] = 'api/index';
+
