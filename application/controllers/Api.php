@@ -10,6 +10,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  * For Master's thesis at University Of Silesia in Katowice
  * 15th of June 2018
  *
+ * Used Libraries
+ * ---------------------
+ * 1. Zend_Barcode(open-source) - https://github.com/zendframework/zend-barcode
+ * 2. PHP_QR_Code(open-source) - https://sourceforge.net/projects/phpqrcode
+ *
  */
 
 class Api extends CI_Controller {
@@ -58,7 +63,7 @@ class Api extends CI_Controller {
 
 
 
-    public function oneD($code = 'SAMPLE BARCODE TYPE: CODE128', $type = 'code128', $key = 'wrong_key')
+    public function oneD($code = 'SAMPLE BARCODE TYPE: CODE128', $key = 'wrong_key', $type = 'code128')
     {
         //$this->authenticator($key); //Verifies the key, if verification fails, code exits.
 
@@ -67,9 +72,9 @@ class Api extends CI_Controller {
         print_r($barcode);
     }
 
-    public function twoD($code = 'SAMPLE BARCODE TYPE: QR', $type = 'qr', $key = 'wrong_key')
+    public function twoD($code = 'SAMPLE BARCODE TYPE: QR', $key = 'wrong_key', $type = 'qr')
     {
-        //$this->authenticator($key); //Verifies the key, if verification fails, code exits.
+        $this->authenticator($key); //Verifies the key, if verification fails, code exits.
 
         $qrcode = $this->set_barcode($code, $type);
 

@@ -106,11 +106,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		<div id="body">
 			<p>Welcome to phpBarcodeGenAPI.</p>
 
-			<p>API for generating 2D barcode is located at:</p>
-            <code><a href="<?= base_url("api/2d") ?>"><?= base_url("api/2d") ?></a></code>
+			<p>API for generating 1D barcode is located at:</p>
+            <code><a href="<?= base_url("api/1d") ?>"><?= base_url("api/1d") ?></a></code>
 
-			<p>API for generating 3D barcode is located at:</p>
-            <code><a href="<?= base_url("api/3d") ?>"><?= base_url("api/3d") ?></a></code>
+			<p>API for generating 1D barcode is located at:</p>
+            <code><a href="<?= base_url("api/2d") ?>"><?= base_url("api/2d") ?></a></code>
 
 			<p>If you are exploring phpBarcodeGenAPI for the very first time, you should start by reading the <a href="user_guide/">User Guide</a>.</p>
 		</div>
