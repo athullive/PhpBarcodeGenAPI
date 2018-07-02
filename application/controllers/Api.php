@@ -63,7 +63,7 @@ class Api extends CI_Controller {
 
 
 
-    public function oneD($code = 'SAMPLE BARCODE TYPE: CODE128', $key = 'wrong_key', $type = 'code128')
+    public function oneD($code = 'SAMPLE TYPE: CODE128', $key = 'wrong_key', $type = 'code128')
     {
         //$this->authenticator($key); //Verifies the key, if verification fails, code exits.
 
@@ -72,9 +72,9 @@ class Api extends CI_Controller {
         print_r($barcode);
     }
 
-    public function twoD($code = 'SAMPLE BARCODE TYPE: QR', $key = 'wrong_key', $type = 'qr')
+    public function twoD($code = 'SAMPLE TYPE: QR', $key = 'wrong_key', $type = 'qr')
     {
-        $this->authenticator($key); //Verifies the key, if verification fails, code exits.
+        //$this->authenticator($key); //Verifies the key, if verification fails, code exits.
 
         $qrcode = $this->set_barcode($code, $type);
 
